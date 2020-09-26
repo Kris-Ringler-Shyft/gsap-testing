@@ -17,6 +17,12 @@
 
   /*dim the background*/
 }
+.showModalButtonContainer{
+   display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 5%;
+}
 
 .closeButtonContainer{
 
@@ -55,4 +61,31 @@
   width: calc(100% - 30px);
   height: calc(100% - 30px);
   margin: 1%;
+}
+
+
+/* HEADER PAGE  */
+
+.header-container-1{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.header-container-2{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.header-big-text{
+
+font-size: 800%;
+opacity: 0;
+
+}
+.header-small-text{
+  font-size: 400%;
+  top: -200%;
+  opacity: 0;
 }

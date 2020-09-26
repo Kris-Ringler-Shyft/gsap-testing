@@ -1,11 +1,12 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { TweenMax, Power3 } from 'gsap'
+import { TweenMax, Power3, Bounce } from 'gsap'
 import Iframe from 'react-iframe'
 
 const Modal = ({ videoSrc }) => {
   const [isOpen, setIsOpen] = useState(false);
   let overlay = useRef(null);
   let modal = useRef(null);
+  let openModal = useRef(null)
 
   //toggles modal open or closed
 
@@ -33,11 +34,17 @@ const Modal = ({ videoSrc }) => {
       TweenMax.to(overlay, 3.5, { backgroundColor: 'rgba(0, 0, 0, 0)' })
         .then(() => toggle());
     })
+
+    //Open Button Animations
+    TweenMax.fromTo(openModal, 3, { y: 500, opacity: 0 }, { y: 0, opacity: 1, delay: 5, ease: Bounce.easeOut, yoyoEase: true });
   })
 
   return (
     <>
-      <button onClick={toggle} className="open">Show Modal </button>
+      <div className="showModalButtonContainer">
+        <button onClick={toggle} className="open" ref={element => openModal = element}>Click Here to Demo Modal</button>
+      </div>
+
       <div className={`${isOpen ? 'overlay' : ''} `} ref={element => overlay = element}>
         <div className={`modal ${isOpen ? 'show' : 'hide'}`} ref={element => modal = element} >
           {/* IFRAME NPM PACKAGE  */}
