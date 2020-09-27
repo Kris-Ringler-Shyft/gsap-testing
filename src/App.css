@@ -89,3 +89,31 @@ opacity: 0;
   top: -200%;
   opacity: 0;
 }
+
+/* MAIN TEXT */
+
+.container{
+  opacity: 0;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 50%;
+  transform: translateX(50%)
+}
+
+.containerTextLeft{
+  opacity: 0;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 35%;
+}
+
+.containerTextRight{
+  opacity: 0;
+   display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 35%;
+
+}
